@@ -1,0 +1,6 @@
+<svg width="240" height="64" viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Pujora logo</title>
+<rect x="2" y="2" width="60" height="60" rx="16" fill="#F0B94A"/>
+<path d="M21,16 L21,48 M21,16 L34,16 C42,16 47,21.5 47,28.5 C47,35.5 42,40 34,40 L21,40" fill="none" stroke="#2E0A4F" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="78" y="41" font-family="Poppins, sans-serif" font-size="28" font-weight="600" fill="#F7F3EE">pujora</text>
+</svg>

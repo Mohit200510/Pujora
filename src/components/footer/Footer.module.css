@@ -1,0 +1,130 @@
+.footer{
+    padding: 60px 0 10px 0;
+    background: url("../../assets/footer-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+.footerUpper{
+    display: flex;
+    border-bottom: 1px #c8c8c8 solid;
+    padding-bottom: 25px;
+}
+.footerFirst{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 55%;
+}
+
+.footerFirst img{
+    width: 200px;
+}
+.footerFirst p{
+    color:  var(--color-text-secondary);
+    padding: 12px 0;
+    line-height: 1.8;
+        font-family: 'poppins', sans-serif;
+}
+.footerSocialIcons svg{
+    font-size: 23px;
+    color: var(--color-primary);
+    margin-right:  20px;
+}
+.footerQuickLinks{
+    padding: 0 100px;
+}
+.footerQuickLinks h4{
+    padding-bottom: 16px;
+}
+.footerQuickLinks ul li{
+    list-style: none; 
+    width: max-content; 
+    padding: 14px 0;
+}
+.footerQuickLinks ul li a{
+    text-decoration: none;
+    color: var(--color-text-secondary);
+}
+.footerContactDiv{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.footerContactDetails h4{
+    margin-bottom: 30px;
+}
+.footerContactDetails svg{
+    margin-right: 16px;
+}
+.footerContactDetails a{
+    text-decoration: none;
+    color: var(--color);
+}
+
+.footerLower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.footerLower p{
+    color: var(--color-text-secondary);
+}
+
+.footerLower svg{
+    font-size: 30px;
+    margin-left: 16px;
+}
+
+
+
+/* media quries */
+
+
+@media screen and (max-width:1200px){
+    .footer{
+        padding: 25px 0 10px 0;
+    }
+    .footerUpper{
+         flex-direction: column;
+         padding-bottom: 0px;
+         gap: 26px
+    }
+    .footerFirst{
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+    .footerFirst img {
+        width: 185px;
+    }
+
+    .footerQuickLinks{
+        padding: 0 0;
+    }
+    .footerQuickLinks h4 {
+        padding-bottom: 8px;
+    }
+    .footerQuickLinks ul li {
+        
+        width: max-content;
+        padding: 0;
+        padding-right: 26px;
+        display: inline;
+    }
+
+    .footerContactDetails h4 {
+         margin-bottom: 8px;
+    }
+
+    .footerLower{
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 0;
+    }
+
+    .footerLower p {
+        text-align: center;
+    }
+
+}

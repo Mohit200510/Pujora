@@ -1,0 +1,362 @@
+.logoWrap{
+    width: 132px;
+    /* height: 20px; */
+    margin-top: 5px;
+}
+.logo{
+   width: 100%;
+}
+
+
+
+.topBar{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-primary-dark);
+}
+.topNavOffer{
+    font-size: 11px;
+    font-weight: 500px;
+    letter-spacing: 0.5px;
+    /* font-family: "cormonant", sans-serif; */
+    color: var(--color-bg);
+}
+
+
+.topNavLinksItem{
+    display: inline-block;
+    padding:  0 10px;
+}
+.topNavLinksItemA{
+    font-size: 14px;
+    color: var(--color-bg);
+    cursor: pointer;
+
+
+}
+.topBarContent{
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.topBarOffer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* midBar */
+
+.midBar{
+    background-color: var(--color-primary);
+    width: 100%;
+
+}
+
+.midBarContent{
+    
+    padding: 9px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.searchWrapper{
+    position: relative;
+    width: 100%;
+}
+.searchBarMain{
+    display: flex;
+    gap: 18px;
+
+}
+.headerSearch{
+
+    width: 39vw;
+    height: 51px;
+    outline: none;
+    border-radius: 999px;
+    padding-left: 16px;
+    font-size: 15px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+.headerSearch:focus{
+    border: 3px var(--color-accent) solid; 
+    outline: none;
+}
+
+.headerSearch::placeholder{
+    width: 0%;
+    /* color: #v; */
+    animation: placeholderAnimate 4s linear  infinite alternate;
+}
+@keyframes placeholderAnimate {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 68%;
+    }
+}
+
+.searchIcon{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    right: 1%;
+    top: 50%;
+    color: var(--color-primary);
+
+}
+
+
+/* icons animation */
+
+.midBarNav{
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    
+
+}
+
+.midBarNavItems{
+    transform: translateY(0);
+    display: inline-block;
+
+}
+.midBarNavItems{
+     transition: 0.3s all ease-out;
+     transform: translateY(0);
+     stroke: var(--color-bg);
+
+     &:hover{
+     stroke: var(--color-accent);
+     transform: translateY(-3px);
+     cursor: pointer;
+     }
+
+}
+
+/*  */
+
+
+.headerCart{
+    position: relative;
+    z-index: 10;
+    
+}
+.cartPreviewBoxTooltip{
+    position: absolute;
+    top: -8%;
+    right: 34.5%;
+}
+
+.cartPreviewBox{
+    
+    display: none;
+    position: absolute;
+    transform: translateX(-57%);
+    top: 49px;
+
+    width: 22vw;
+    height: max-content;
+    padding: 24px;
+    border-radius: 16px;
+    border: none;
+    background: var(--color-surface);
+    transition: 5s all ease-in;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
+
+}
+/*  */
+.cartPreviewBoxHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px var(--color-border) solid;
+
+
+}
+.cartPreviewBoxHeadleft{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.cartPreviewBoxHeadleft h6{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary);
+
+}
+.cartPreviewBoxHeadleft p{
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+.cartPreviewBoxHeadleft span{
+    /* border: 1px #111 solid; */
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    padding: 10px 10px 4px 10px; 
+
+}
+
+.cartPreviewBoxHeadright span{
+
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: 5px 14px 5px 14px;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 600;
+}
+/*  */
+
+
+.cartPreviewSubtotal{
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+.cartPreviewSubtotal p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    margin-bottom: 3px;
+}
+.cartPreviewSubtotal span{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: "inter" ,sans-serif;
+}
+.cartPreviewOpenCart{
+    border: 2px var(--color-primary) solid;
+    border-radius: 14px;
+    color: var(--color-primary);
+    background-color: #fff;
+    width: 100%;
+    height: 52px;
+    font-size: 15px;
+    font-weight: 600;
+    &:hover{
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+
+}
+
+/* .cartPreviewbtn{
+    width: 45%;
+    background-color: var(--color-primary);
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 8px;
+    
+    height: 40px;
+    outline: none;
+    
+} */
+.cartIcon:hover .cartPreviewBox{
+    display: block;
+}
+
+
+
+
+/* bottom bar */
+
+.bottomBar{
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.bottomBarUl{
+    padding: 10px 0;
+    display: flex;
+    /* gap: 90px; */
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.bottomBarNavItemsLink{
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.4s color ease-in;
+    &:hover{
+        color: var(--color-primary);
+    }
+}
+
+
+
+/* media quires */
+
+
+
+@media  screen and (max-width:991px) {
+    
+    .topNavOffer{
+        font-family: "cormonant", sans-serif;
+        font-size: 10.5px;
+    }
+    .topNavLinksItem{
+        display: none;
+    }
+    .bottomBar{
+        display: none;
+    }
+    .heartIcon{
+        display: none;
+    }
+
+    .location{
+        display: none !important;
+    }
+    .hamBurgerIcon{
+        display: block;
+    }
+    .searchBarMain{
+        order: 4;
+        width: 100%;
+    }
+    .midBar{
+        height: auto;
+    }
+
+    .midBarContent{
+        height: auto;
+        flex-wrap: wrap;
+        row-gap: 12px;
+        padding: 8px 0 15px 0
+
+    }
+    .headerSearch{
+
+        width: 100%;
+        height: 46px;
+    }
+    .logoWrap{
+        width: 120px;
+    }
+}
+
+
+
+@media  screen and (min-width:992px){
+    .hamBurgerIcon{
+        display: none;
+    }
+}   

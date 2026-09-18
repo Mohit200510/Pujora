@@ -1,0 +1,308 @@
+.sectionCategories{
+    margin: 90px 0 0 0;
+}
+.secCategoriesHeader{
+    text-align: center;
+    position: relative;
+}
+
+.secCategoriesHeader::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: var(--color-accent-dark);
+    display: block;
+    margin: 24px auto 0;
+    border-radius: 10px;
+}
+.secCategoriesHeader h2{
+    font-size: 42px;
+    color: var(--color-primary);
+    font-weight:700;
+    font-family: 'cormonant', sans-serif;
+    margin-bottom: 14px;
+}
+.secCategoriesHeader p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    font-family: "inter" ,sans-serif;
+}
+
+/*  */
+
+.secCategoriesContent{
+    width: 100%;
+    /* background: url("../../assets/catrgoriesbg.png"); */
+    /* background: url("../../assets/catrgoriesbg.png"); */
+    background-size: cover;
+    background-position: center;
+    /* position: relative; */
+    padding: 80px 0 0 0;
+    
+}
+
+.CategoryBoxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 32px; */
+    row-gap: 30px;
+}
+
+.CategoryBox {
+    box-shadow: 0 16px 45px rgba(45,10,78,.08);
+    position: relative;
+    /* width: 28%; */
+     min-width: 320px;
+    flex: 0 0 calc(30% - 24px);
+    border: 1px var(--color-accent) solid;
+    border-radius: 20px;
+    /* background-color: #FFFDF8; */
+    background-color: var(--color-surface);
+    overflow: hidden;
+    transform: translateY(0px);
+    transition: 0.3s all ease-out;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-7px);
+        /* border-color:var(--color-accent-dark); */
+        
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.10),
+        0 0 0 1px rgba(255,216,115,.35),
+        0 8px 30px rgba(244,185,66,.18);
+}
+}
+.CategoryBoxImgWrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.CategoryBoxImgWrap img{
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transition:.5s ease;
+}
+.CategoryBox:hover img{
+    transform:scale(1.06);
+}
+.categoryImgDivider{
+    position: absolute;
+    bottom: -11px;
+    width: 101%;
+}
+
+.categoryBoxContent{
+    padding: 0 20px 25px 20px;
+}
+
+.categoryBoxContentText{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.categoryBoxContentTextFirst{
+    width: 54%
+}
+
+.categoryBoxContentText h3{
+    margin-bottom: 6px;
+    font-size: 23px;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-family: "cormonant" ,sans-serif;
+}
+
+.categoryBoxContentText p{
+    font-size: 14px;
+    /* color: var(--color-text-secondary); */
+    color: #9b958c;
+    font-weight: 500;
+}
+
+.categoryBoxContentText span{
+    color: var(--color-surface);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.CategoryBoxArrow{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 20px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: var(--color-primary);
+
+}
+
+
+.CategoriesSeeMore{
+    margin: 67px 0 0 0;
+}
+.CategoriesSeeMore button{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 15px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50px;
+    padding:16px 34px;
+    width:fit-content;
+    height:auto;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 400;
+    transition: 0.2s all ease-out;
+
+    &:hover{
+        background-color: var(--color-primary-dark);
+        
+    }
+
+}
+
+
+
+/* /media queris */
+
+@media screen and (min-width:992px) {
+    .CategoryBoxes{
+        
+        gap: 35px;
+    }
+    /* .CategoryBox{
+        flex: 0 0 calc(33.33% - 22px);
+    } */
+    
+}
+
+@media screen and (max-width:991px) {
+    .CategoryBox{
+        flex: 0 0 calc(50% - 16px);
+    }
+    .secCategoriesHeader h2{
+        font-size: 36px;
+    }
+    .secCategoriesHeader p{
+        font-size: 16px;
+    }
+    .CategoryBoxes{
+        gap: 26px;
+    }
+    
+}
+
+
+/* mobiles */
+
+@media (max-width:768px){
+
+.sectionCategories{
+    margin:70px 0 0 0;
+}
+
+.secCategoriesContent{
+    padding:60px 0;
+}
+
+.CategoryBoxes{
+    gap:22px;
+}
+
+.CategoryBox{
+    flex:1 1 100%;
+    max-width:none;
+}
+
+.secCategoriesHeader h2{
+    font-size:32px;
+}
+
+.secCategoriesHeader p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+.categoryBoxContent{
+    padding:18px;
+}
+
+.categoryBoxContentText h3{
+    font-size:28px;
+}
+
+.categoryBoxContentText p{
+    font-size:17px;
+}
+
+}
+
+
+/* till medium mobile screen */
+
+@media (max-width:480px){
+
+.sectionCategories{
+    margin:60px 0;
+}
+.CategoryBox{
+    min-width: unset;
+}
+
+.secCategoriesContent{
+    margin-top:40px;
+    padding:45px 0;
+}
+
+.secCategoriesHeader h2{
+    font-size:28px;
+}
+
+.secCategoriesHeader p{
+    font-size:14px;
+}
+
+.categoryBoxContentText{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+}
+
+.categoryBoxContentTextFirst{
+    width:100%;
+}
+
+.CategoryBoxArrow{
+    width:100%;
+    justify-content:center;
+}
+
+.categoryBoxContentText h3{
+    font-size:22px;
+}
+
+.categoryBoxContentText p{
+    font-size:15px;
+}
+
+.CategoriesSeeMore button{
+
+    width:100%;
+
+}
+.secCategoriesContent {
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+}
