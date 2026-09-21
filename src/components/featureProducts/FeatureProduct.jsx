@@ -7,7 +7,7 @@ import styles from "./FeatureProducts.module.css"
 function FeatureProduct(props) {
   return (
    
-        <div className={styles.featureProductsBox}>
+        <>
 
                         <div className={styles.featureProductBoxWishlist}>
                             <Heart stroke='var(--color-primary)' size={24}/>
@@ -34,8 +34,8 @@ function FeatureProduct(props) {
 
 
                             <div className={styles.featureProductBoxPrice}>
-                                <h4>{props.price}</h4>
-                                <h5><del>{props.mrp}</del></h5>
+                                <h4>₹{props.price}</h4>
+                                <h5><del>₹{props.mrp}</del></h5>
                             </div>
 
                             <button type='button'>Add To Cart</button>
@@ -43,7 +43,7 @@ function FeatureProduct(props) {
                         </div>
 
 
-                    </div>
+                    </>
     
   )
 }

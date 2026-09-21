@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Hero.module.css";
 import Container from '../common/Container';
-import banner from "../../assets/herobanner.png";
+import banner from "../../assets/kanhaherobg.png";
 // import Mobbanner from "../../assets/mob2.png"
 import Mobbanner from "../../assets/newherobg.png"
 import { LayoutGrid,ShoppingBag } from 'lucide-react';
@@ -21,9 +21,9 @@ function Hero() {
 
             <div className={styles.herotext}>
 
-              <h1>India's Trusted<br/>Destination for<br/> Puja Essentials</h1>
+              <h1>Bringing Devotion Closer to Home</h1>
               
-              <p>Everything you need for daily worship and festive celebrations , delivered with trust across India.</p>
+              <p>Authentic puja essentials for everyday worship, festivals and sacred occasions.</p>
               <div className={styles.heroBtn}>
 
 
