@@ -11,7 +11,7 @@ function TrustSection() {
 
 
             <div className={styles.trustSectionHeader}>
-                <h2>Why Choose <span> Pujora</span></h2>
+                <h2>Why Choose <span> Poonjora</span></h2>
                 <p>Bringing purity, authenticity, and devotion to every home with handpicked selected puja essentials.</p>
             </div>
         

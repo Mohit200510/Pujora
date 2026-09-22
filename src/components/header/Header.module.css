@@ -3,6 +3,9 @@
     /* height: 20px; */
     margin-top: 5px;
 }
+.logoWrap img{
+    width: 155px;
+}
 .logo{
    width: 100%;
 }
