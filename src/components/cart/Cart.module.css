@@ -1,4 +1,6 @@
 .cartMain{
+    overscroll-behavior: contain;
+
     position: fixed;
     top: 0;
     right: 0;
