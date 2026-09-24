@@ -2,7 +2,9 @@ import React from 'react'
 import Container from '../common/Container'
 import styles from "./Header.module.css";
 // import logo from "../../assets/PujoraLogo.svg";
-import logo from "../../assets/poonjora_logo.png";
+// import logo from "../../assets/poonjora_logo.png";
+// import logo from "../../assets/test.png";
+import logo from "../../assets/test6.png";
 import SearchBar from './SearchBar';
 import Location from './Location';
 import ShopingCart from './ShopingCart';
@@ -16,8 +18,9 @@ import CartContext from '../../context/CartContext';
 
 function MidBar() {
 
-    const {closeCart,setCloseCart} = useContext(CartContext)
+    const {closeCart,setCloseCart,cartItems} = useContext(CartContext)
 
+    
     function OpenCart(){
         setCloseCart(false)
     }
@@ -46,8 +49,9 @@ function MidBar() {
 
                     <Location ></Location>
                     <WishList className={styles.midBarNavItems}></WishList>
-                    <div  onClick={OpenCart}>
+                    <div className={styles.midBarNavCartIconDiv}  onClick={OpenCart}>
                     <ShopingCart className={styles.midBarNavItems}></ShopingCart>
+                    <span style={{visibility: cartItems.length >=1? "visible":"hidden"}} className={styles.cartCountBadge}>{cartItems.length}</span>
                     </div>
                     <UserAccount className={styles.midBarNavItems}></UserAccount>
                     

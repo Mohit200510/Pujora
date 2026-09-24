@@ -1,10 +1,27 @@
-import React from 'react'
-import StarIcon from '../common/StarIcon'
+import React, { useState } from 'react'
+
 import { Star ,Heart} from 'lucide-react'
 import styles from "./FeatureProducts.module.css"
 
+import { useContext } from 'react'
+import CartContext from '../../context/CartContext'
+import { MdOutlineStar } from "react-icons/md";
+import { MdDone } from "react-icons/md";
 
-function FeatureProduct(props) {
+
+
+function FeatureProduct({product}) {
+
+
+    const {addToCart,cartItems} = useContext(CartContext)
+    
+
+    const isInCart = cartItems.some((item) => {
+        return item.id === product.id;
+    });
+
+
+
   return (
    
         <>
@@ -18,27 +35,33 @@ function FeatureProduct(props) {
                         </div>
 
                         <div className={styles.featureProductBoxImgWrapper}>
-                            <img src={props.image}></img>
+                            <img src={product.image_url}></img>
                         </div>
 
                         <div className={styles.featureProductBoxText}>
-                            <h3>{props.name}</h3>
+                            <h3>{product.name}</h3>
+                            <h4 className={styles.featureProductBoxWeight}>{product.weight}</h4>
 
                             <div className={styles.featureProductBoxRating}>
                                 <div>
-                                <StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/>
+                                
+                                <MdOutlineStar/><MdOutlineStar/><MdOutlineStar/><MdOutlineStar/><MdOutlineStar/>
+
                                 </div>
-                                <span>4.8 (122)</span>
+                                <span> <b>4.8</b> (122)</span>
                             </div>
 
 
 
                             <div className={styles.featureProductBoxPrice}>
-                                <h4>₹{props.price}</h4>
-                                <h5><del>₹{props.mrp}</del></h5>
+                                <h4>₹{product.sale_price}</h4>
+                                <h5><del>₹{product.mrp}</del></h5>
+                                <h6>Save ₹{product.mrp-product.sale_price}</h6>
                             </div>
 
-                            <button type='button'>Add To Cart</button>
+                            <button style={{background:isInCart?"#703274": "#36014f"}} onClick={()=>{
+                                addToCart(product)
+                            }} type='button'>{isInCart?" ✓ Added to Cart ":"Add to Cart"}</button>
 
                         </div>
 

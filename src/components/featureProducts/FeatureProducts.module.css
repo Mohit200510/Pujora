@@ -62,8 +62,9 @@
     padding: 0px 0px 0px 0px;
     box-shadow: var(--shadow-sm);
     transform: translateY(0);
-
+        overflow: hidden;
     transition: 0.4s all ease-out;
+
 
     &:hover{
         transform: translateY(-5px);
@@ -89,25 +90,28 @@
     border-radius: 50%;
 }
 
-.featureProductBoxBadge{
+.featureProductBoxBadge {
+    /* width: max-content; */
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 8px;
     z-index: 1;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: #fff;
     font-size: 12px;
     font-weight: 500;
-    padding: 4px 20px;
-    border-radius: 4px;
-    /* border-top-left-radius:8px ; */
+    padding: 4px 14px;
+    border-radius: 8px;
+    /* border-top-left-radius: 8px; */
 }
-.featureProductBoxImgWrapper{
-    width: 200px;
-    height: 250px;
+.featureProductBoxImgWrapper {
+    width: 100%;
+    height: 35vh;
     position: relative;
     display: flex;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-bottom: 17px;
+    background-color: var(--color-primary-light);
 }
 .featureProductBoxImgWrapper img{
     width: 300px;
@@ -133,26 +137,48 @@
     min-height: calc(1.4em * 2); /* Height of exactly 2 lines */
 
     padding: 0 14px 0px 14px;
-    margin: 5px 0 10px 0;
-    font-size: 18px;
-    font-weight: 600;
-    font-family: "inter", sans-serif;
+    margin: 5px 0 4px 0;
+    font-size: 17px;
+    font-weight: 500;
+    /* font-family: "inter", sans-serif; */
     line-height: 24px;
     color: var(--color-text-primary)
+}
+.featureProductBoxWeight {
+    color: var(--color-text-secondary);
+    font-weight: 700;
+    margin: 0 14px 12px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "inter",sans-serif;
 }
 .featureProductBoxRating{
     padding: 0 14px 0px 14px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+}
+.featureProductBoxRating div{
+    line-height: 0;
+}
+.featureProductBoxRating svg{
+    color: var(--color-accent);
+    font-size: 20px;
 }
 
 .featureProductBoxRating span{
+    font-family: "inter",sans-serif;
     font-size: 13px;
     color: #6B7280;
+    line-height: 0;
+}
+
+.featureProductBoxRating b{
+    color: var(--color-text);
+
 }
 .featureProductBoxPrice{
-    margin: 8px 14px 12px 14px;
+    margin: 14px 14px 19px 14px;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -161,20 +187,31 @@
     font-size: 26px;
     font-weight: 600;
     color: var(--color-primary);
+    font-family: "inter", sans-serif;
 }
-.featureProductBoxPrice h5{
+.featureProductBoxPrice h5 del{
     font-size: 16px;
     color: #9ca3af;
     font-weight: 500;
+    font-family: "inter", sans-serif;
+}
+.featureProductBoxPrice h6{
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-family: "inter",sans-serif;
 }
 .featureProductBoxText button{
     width: 100%;
     color: #fff;
     background-color: var(--color-primary);
-    background-color:  #441246;
-    height: 58px;
+    height: 62px;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     font-size: 15px;
     font-weight: 700;
     border: none;

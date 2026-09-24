@@ -3,14 +3,7 @@ import { useState,useEffect } from 'react'
 import { supabase } from '../../supabaseClient'
 import styles from './FeatureProducts.module.css'
 import Container from '../common/Container'
-// import productOne from "../../assets/featureCard1.png"
-// import productTwo from "../../assets/featureCard2.png"
-// import productThree from "../../assets/featureCard3.png"
-// import productFour from "../../assets/featureCard4.png"
-// import productFive from "../../assets/featureCard5.png"
-// import productSix from "../../assets/featureCard6.png"
-// import productSeven from "../../assets/featureCard7.png"
-// import productEight from "../../assets/featureCard8.png"
+
 import FeatureProduct from './FeatureProduct'
 import { ArrowRight } from 'lucide-react'
 
@@ -50,12 +43,12 @@ function FeatureProducts() {
             <div className={styles.FeatureProductsMain}>
 
                 
-
+  
                 <div className={styles.featureProductsBoxes}>
 
                     {products.map((product,index)=>(
-                        <div className={styles.featureProductsBox} key={index}>
-                            <FeatureProduct  image = {product.image_url} name = {product.name} price ={product.sale_price} mrp = {product.mrp} ></FeatureProduct>
+                        <div className={styles.featureProductsBox} key={product.id}>
+                            <FeatureProduct product ={product}></FeatureProduct>
                         </div>
                     ))}
 
