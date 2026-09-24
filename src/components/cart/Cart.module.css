@@ -132,6 +132,7 @@
 }
 
 .cartItemDetails {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 9px;
@@ -336,5 +337,19 @@
     &:hover{
         background: var(--color-primary-dark);
         cursor: pointer;
+    }
+}
+
+
+
+
+/* res,monive */
+
+
+@media screen and (max-width:480px) {
+
+    .cartMain{
+        width: 100%;
+        border-radius: 30px;
     }
 }
