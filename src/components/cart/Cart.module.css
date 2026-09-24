@@ -21,6 +21,7 @@
     justify-content: space-between;
     padding-bottom: 15px;
     border-bottom: 1px var(--color-border) solid;
+    touch-action: none;
 
 }
 .cartTop h3{
@@ -243,6 +244,7 @@
     left: 0;
     bottom: 0;
     box-shadow: rgba(175, 175, 175, 0.3) 0px -1px 5px 0px;
+    touch-action: none;
 }
 .cartBottmDiv{
     padding: 0 15px 20px;
