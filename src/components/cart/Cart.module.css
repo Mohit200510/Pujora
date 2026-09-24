@@ -350,7 +350,8 @@
 
     .cartMain{
         width: 100%;
-        border-radius: 30px;
-        height: 100%;
+        border-radius: 0;
+        height: 100dvh;
+        
     }
 }
