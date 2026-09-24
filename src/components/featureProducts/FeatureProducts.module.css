@@ -204,6 +204,7 @@
     font-family: "inter",sans-serif;
 }
 .featureProductBoxText button{
+    max-width: 100px;
     width: 100%;
     color: #fff;
     background-color: var(--color-primary);
