@@ -99,7 +99,10 @@
 .cartBody {
     
     margin-top: 14px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    
+    overflow-y: auto;
+    overscroll-behavior: contain;
     height: 67vh;
 }
 .cartBody::-webkit-scrollbar {
