@@ -12,12 +12,16 @@ import { useContext } from 'react';
 import CartContext from '../../context/CartContext';
 import bagImg from "../../assets/pujora_bag.png"
 import { FaTruckFast } from "react-icons/fa6";
+import Checkout from '../checkout/Checkout';
+
 
 
 
 function Cart() {
     
     const {CloseCart,closeCart,setCloseCart,cartItems,setCartItems,decreaseQuantity,increaseQuantity,cartPriceTotal,cartMRPTotal,cartDiscount} = useContext(CartContext);
+
+    const [openCheckout,setOpenCheckout]=useState(false)
 
     
 
@@ -142,12 +146,24 @@ function Cart() {
                     </div>
 
                     <div className={styles.cartBottomCheckoutbtn}>
-                        <button type='button'>Checkout <FaArrowRightLong/></button>
+                        <button onClick={()=>{
+                           
+                            console.log("button is clicked");
+                             setOpenCheckout(true)
+                            
+                        }} type='button'>Checkout <FaArrowRightLong/></button>
                     </div>
+
+                    
+
+       
+                
 
                 </div>
             </div>
+             {openCheckout?<Checkout/>:null}
         </div>
+        
 
     
   )
