@@ -1,11 +1,14 @@
-.cartMain{
-    overscroll-behavior: contain;
 
+
+.cartMain{
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: contain;
     position: fixed;
     top: 0;
     right: 0;
     width: 26vw;
-    height: 100vh;
+    height: 100dvh;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: #fff;
@@ -64,6 +67,7 @@
     font-family: "inter",sans-serif;
 }
 
+/*  */
 .cartOfferHeadline {
     display: flex;
     justify-content: center;
@@ -75,6 +79,7 @@
     color: #fff;
     border-radius: 8px;
     padding: 6px 0;
+    touch-action: none;
     /* font-family: 'dormonant',sans-serif; */
 }
 .cartOfferHeadline span{
@@ -87,7 +92,6 @@
 }
 .cartOfferHeadline b{
         color: var(--color-primary);
-
 }
 .cartOfferHeadline svg{
     color: var(--color-primary);
@@ -95,18 +99,18 @@
     line-height: 0;
 }
 
-
-
 /*  */
 /*  */
 .cartBody {
+    flex: 1;
+    min-height: 0;
     
     margin-top: 14px;
     /* overflow-y: scroll; */
     
     overflow-y: auto;
     overscroll-behavior: contain;
-    height: 67vh;
+    /* height: 67vh; */
 }
 .cartBody::-webkit-scrollbar {
     display: none;
@@ -240,11 +244,12 @@
 /* cart bottom */
 .cartBottom{
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     bottom: 0;
     box-shadow: rgba(175, 175, 175, 0.3) 0px -1px 5px 0px;
     touch-action: none;
+    flex-shrink: 0;
 }
 .cartBottmDiv{
     padding: 0 15px 20px;
