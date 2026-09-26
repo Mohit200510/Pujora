@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Hero.module.css";
 import Container from '../common/Container';
-import banner from "../../assets/kanhaherobg.png";
+import banner from "../../assets/hero_bg.webp";
 // import Mobbanner from "../../assets/mob2.png"
 import Mobbanner from "../../assets/newherobg.png"
 import { LayoutGrid,ShoppingBag } from 'lucide-react';

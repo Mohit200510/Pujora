@@ -1,12 +1,12 @@
 import React from 'react'
 import Container from '../common/Container'
 import styles from "./Categories.module.css"
-import catg1 from "../../assets/categoryOne.png"
-import catg2 from "../../assets/categoryTwo.png"
-import catg3 from "../../assets/categoryThree.png"
-import catg4 from "../../assets/categoryFour.png"
-import catg5 from "../../assets/categoryFive.png"
-import catg6 from "../../assets/categorySix.png"
+import catg1 from "../../assets/categoryOne.webp"
+import catg2 from "../../assets/categoryTwo.webp"
+import catg3 from "../../assets/categoryThree.webp"
+import catg4 from "../../assets/categoryFour.webp"
+import catg5 from "../../assets/categoryFive.webp"
+import catg6 from "../../assets/categorySix.webp"
 import Category from './Category'
 import { ArrowRight } from 'lucide-react'
 
