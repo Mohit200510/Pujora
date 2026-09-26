@@ -10,10 +10,14 @@ import { X } from 'lucide-react'
 
 
 
-function LoginBox() {
+function LoginBox({googleLoginForm,setOpenCheckout}) {
+
+
   return (
-    <div className={`${styles.loginBox} ${styles.checkoutBox}`}>
-        <X className={styles.loginBoxCrossIcon}/>
+    <div className={`${styles.loginBox}`}>
+        <X onClick={()=>{
+            setOpenCheckout(false)
+        }} className={styles.loginBoxCrossIcon}/>
         <div>
             <div className={styles.loginBoxWrappper}>
                 <div className={styles.loginBoxLogo}>
@@ -27,7 +31,7 @@ function LoginBox() {
                 <div className={styles.loginBoxMid}>
 
                     <div className={styles.loginBoxGoogleBtn}>
-                        <button type='button'><FcGoogle className={styles.googleIcon}/><PiLineVerticalThin className={styles.line} />Continue with Google<FiArrowRight className={styles.arrow}/></button>
+                        <button onClick={googleLoginForm} type='button'><FcGoogle className={styles.googleIcon}/><PiLineVerticalThin className={styles.line} />Continue with Google<FiArrowRight className={styles.arrow}/></button>
                     </div>
                     <div className={styles.loginBoxDividerLine}>
                         <span></span>

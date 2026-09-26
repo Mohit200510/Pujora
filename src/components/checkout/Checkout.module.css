@@ -1,26 +1,29 @@
-.checkoutBox{
+
+.checkoutWindow{
+            display: flex;
+        flex-direction: column;
+        justify-content: center;
     width: 30dvw;
+    max-height: 90dvh;
     height: auto;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    /* background-color: #fff; */
+    background-color: #fff;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     overflow: hidden;
     z-index: 1000;
-    padding: 30px  30px 40px 30px;
-}
-
-.loginBox{
-    text-align: center;
+    padding: 40px  35px 50px 35px;
     background: url("../../assets/checkout_bg.png");
     background-position: top;
     background-size: cover;
+    text-align: center;
 
 }
-.loginBox {
+
+.checkoutWindow {
   animation: checkoutOpen 0.8s ease-out;
 }
 
@@ -35,6 +38,12 @@
     top: 50%;
   }
 }
+
+
+.loginBox{
+    
+
+}
 .loginBoxCrossIcon{
     position: absolute;
     right: 14px;
@@ -48,7 +57,7 @@
     width: 56px;
 }
 .LoginBoxHeading{
-    margin: 10px 0 42px 0;
+    margin: 10px 0 50px 0;
 }
 .LoginBoxHeading h3{
     font-size: 26px;
@@ -83,6 +92,13 @@
     color: #fff;
     border: none;
     margin-bottom: 12px;
+    transition: 0.09s all ease-out;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--color-primary-dark);
+
+
+    }
 
 }
 .loginBoxGoogleBtn .googleIcon{
@@ -124,4 +140,14 @@
     text-decoration:  none;
     font-weight: 500;
 
+}
+
+
+@media screen and (max-width:560px) {
+    .checkoutWindow{
+        width: 100dvw;
+        height: 100dvh;
+        max-height: 100dvh;
+    }
+    
 }

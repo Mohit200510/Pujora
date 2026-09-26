@@ -163,7 +163,7 @@ function Cart() {
 
                 </div>
             </div>
-             {openCheckout?<Checkout/>:null}
+             {openCheckout?<Checkout setOpenCheckout = {setOpenCheckout} />:null}
         </div>
         
 

@@ -3,9 +3,10 @@ import styles from "./Checkout.module.css"
 import { useEffect,useState } from 'react'
 import { supabase } from '../../supabaseClient'
 import LoginBox from './LoginBox'
+import Overlay from '../common/Overlay'
 
 
-function Checkout() {
+function Checkout({setOpenCheckout}) {
 
 const [user,setUser]= useState(null)
 console.log("uer",user);
@@ -64,7 +65,11 @@ const handleGoogleLogin = async () => {
     //     <button onClick={handleGoogleLogin}>Continue with GOOGLE</button>
 
     // </div> */}
-    {user?null:<LoginBox/>}
+    <Overlay/>
+
+    <div className={styles.checkoutWindow}>
+    {user?null:<LoginBox googleLoginForm = {handleGoogleLogin} setOpenCheckout= {setOpenCheckout}/>}
+    </div>
     
 </>
   )
