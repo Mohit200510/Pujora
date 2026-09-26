@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./Checkout.module.css"
 import { useEffect,useState } from 'react'
 import { supabase } from '../../supabaseClient'
-
+import LoginBox from './LoginBox'
 
 
 function Checkout() {
@@ -37,8 +37,12 @@ const handleGoogleLogin = async () => {
     provider: "google",
 
     options: {
-      redirectTo: window.location.origin,
+      redirectTo: "http://localhost:5173/",
+      queryParams: {
+        prompt: "select_account",
+      },
     },
+    
 
 
   });
@@ -53,14 +57,16 @@ const handleGoogleLogin = async () => {
 
 
   return (
-    <div className={styles.checkoutBox}>
-        Checkout
-        {user ? <p>Logged in</p> : <p>Guest user</p>}
-        <button onClick={handleGoogleLogin}>Continue with GOOGLE</button>
+    <>
+    {/* // <div className={styles.checkoutBox}>
+    //     Checkout
+    //     {user ? <p>Logged in</p> : <p>Guest user</p>}
+    //     <button onClick={handleGoogleLogin}>Continue with GOOGLE</button>
 
-    </div>
+    // </div> */}
+    {user?null:<LoginBox/>}
     
-
+</>
   )
 }
 

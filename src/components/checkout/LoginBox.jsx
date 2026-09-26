@@ -1,0 +1,51 @@
+import React from 'react'
+import styles from "./Checkout.module.css"
+import logo from "../../../public/pujora_icon.png"
+import { FcGoogle } from "react-icons/fc";
+import { PiLineVerticalThin } from "react-icons/pi";
+import { FiArrowRight } from "react-icons/fi";
+import { X } from 'lucide-react'
+
+
+
+
+
+function LoginBox() {
+  return (
+    <div className={`${styles.loginBox} ${styles.checkoutBox}`}>
+        <X className={styles.loginBoxCrossIcon}/>
+        <div>
+            <div className={styles.loginBoxWrappper}>
+                <div className={styles.loginBoxLogo}>
+                    <img src={logo}></img>
+                </div>
+                <div className={styles.LoginBoxHeading}>
+                    <h3>Sign In</h3>
+                    <p>Sign in for a faster seemless exprience</p>
+                </div>
+
+                <div className={styles.loginBoxMid}>
+
+                    <div className={styles.loginBoxGoogleBtn}>
+                        <button type='button'><FcGoogle className={styles.googleIcon}/><PiLineVerticalThin className={styles.line} />Continue with Google<FiArrowRight className={styles.arrow}/></button>
+                    </div>
+                    <div className={styles.loginBoxDividerLine}>
+                        <span></span>
+                        <p>OR</p>
+                        <span></span>
+                    </div>
+                    <div className={styles.loginBoxGuestBtn}>
+                        <a href=''>Continue as Guest</a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+  )
+}
+
+export default LoginBox

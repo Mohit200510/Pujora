@@ -5,9 +5,123 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     overflow: hidden;
     z-index: 1000;
+    padding: 30px  30px 40px 30px;
+}
+
+.loginBox{
+    text-align: center;
+    background: url("../../assets/checkout_bg.png");
+    background-position: top;
+    background-size: cover;
+
+}
+.loginBox {
+  animation: checkoutOpen 0.8s ease-out;
+}
+
+@keyframes checkoutOpen {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+.loginBoxCrossIcon{
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.loginBoxLogo img{
+    width: 56px;
+}
+.LoginBoxHeading{
+    margin: 10px 0 42px 0;
+}
+.LoginBoxHeading h3{
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--color-text-priamry);
+    font-family: "inter",sans-serif;
+    margin-bottom: 6px;
+}
+.LoginBoxHeading p{
+    color: var(--color-text-secondary);
+}
+
+
+.loginBoxMid{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* align-items: center; */
+    justify-content: center;
+}
+     
+.loginBoxGoogleBtn button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 18px;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    padding: 12px 0;
+    color: #fff;
+    border: none;
+    margin-bottom: 12px;
+
+}
+.loginBoxGoogleBtn .googleIcon{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 36px;
+
+}
+.loginBoxGoogleBtn .line{
+    color: var(--color-text-secondary);
+    font-size: 30px;
+}
+
+.loginBoxGoogleBtn .arrow{
+    font-size: 30px;
+}
+
+.loginBoxDividerLine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.loginBoxDividerLine span{
+    height: 1px;
+    flex: 1;
+    background-color: var(--color-text-muted);
+}
+.loginBoxDividerLine p{
+    color: var(--color-text-secondary);
+    margin: 0;
+    font-size: 14px;
+}
+
+.loginBoxGuestBtn a{
+    font-size: 16px;
+    color: var(--color-primary);
+    text-decoration:  none;
+    font-weight: 500;
+
 }

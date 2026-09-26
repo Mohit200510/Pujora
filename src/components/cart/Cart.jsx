@@ -132,6 +132,7 @@ function Cart() {
                         <div className={styles.cartBottomTotalLeft}>
                             <PiNewspaperFill/>
                             <p>Estimated Total</p>
+                            
                         </div>
 
                         <div className={styles.cartBottomTotalRight}>
@@ -150,6 +151,7 @@ function Cart() {
                            
                             console.log("button is clicked");
                              setOpenCheckout(true)
+                             setCloseCart(true)
                             
                         }} type='button'>Checkout <FaArrowRightLong/></button>
                     </div>
