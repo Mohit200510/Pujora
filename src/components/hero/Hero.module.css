@@ -49,6 +49,8 @@
         display: block;
         width: 100%;
         height: auto;
+        display: none;
+                background: #fff;
     }
 
 
@@ -59,12 +61,10 @@
     display: flex;
     align-items: center;
     /* justify-content: space-evenly; */
-    display: none;
+    /* display: none; */
 }
 
 .herotext{
-    
-   
     /* margin-top: 64px; */
     display: flex;
     flex-direction: column;
@@ -147,6 +147,16 @@
 
 /* media */
 
+@media screen and (max-width:649px) {
+    .mobbanner{
+        display: block;
+
+    }
+    .heroContent{
+        display: none;
+    }
+    
+}
 
 
 @media screen and (max-width:991px){
@@ -155,10 +165,10 @@
         /* height: 350px; */
     }
     .bannerImg{
-        display: none;
+        /* display: none; */
     }
     .mobbanner{
-        display: block;
+        /* display: block; */
     }
     .heroContent{
         height: 350px;

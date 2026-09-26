@@ -12,9 +12,10 @@ function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.bannerOverlay}>
-      {/* <Container> */}
+      
         <img className={styles.bannerImg} src={banner}></img>
         <img className={styles.mobbanner} src={Mobbanner}></img>
+        <Container>
 
         <div className={styles.heroWraper}>
 
@@ -55,7 +56,7 @@ function Hero() {
 
 
 
-      {/* </Container> */}
+      </Container>
       </div>
     </section>
   )
